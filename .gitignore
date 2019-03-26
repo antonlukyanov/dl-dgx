@@ -1,0 +1,12 @@
+.tunnel*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyCharm
+.idea/
+
+# virtualenv
+.venv/
