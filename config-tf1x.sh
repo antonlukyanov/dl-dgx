@@ -1,3 +1,3 @@
-jl_port=8889
-ssh_port=8890
-tb_port=8899
+jl_port=9000
+tb_port=9001
+ssh_port=9002
