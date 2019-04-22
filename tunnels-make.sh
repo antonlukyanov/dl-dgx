@@ -18,18 +18,21 @@ tb_sock=.tunnel-$tb_port-tb
 
 if [[ ! -S "$jl_sock" ]]; then
     ssh -M -S $jl_sock -fNL $jl_tun dgx
+    echo "[info]: $jl_sock created"
 else
-    echo "[info]: $jl_tun tunnel exists"
+    echo "[warning]: $jl_sock exists"
 fi
 
 if [[ ! -S "$ssh_sock" ]]; then
     ssh -M -S $ssh_sock -fNL $ssh_tun dgx
+    echo "[info]: $ssh_sock created"
 else
-    echo "[info]: $ssh_tun tunnel exists"
+    echo "[warning]: $ssh_sock exists"
 fi
 
 if [[ ! -S "$tb_sock" ]]; then
     ssh -M -S $tb_sock -fNL $tb_tun dgx
+    echo "[info]: $tb_sock created"
 else
-    echo "[info]: $tb_tun tunnel exists"
+    echo "[warning]: $tb_sock exists"
 fi

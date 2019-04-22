@@ -4,4 +4,5 @@
 ssh -o UserKnownHostsFile=/dev/null \
     -o StrictHostKeyChecking=no \
     -o LogLevel=ERROR \
-    -M -S .tunnel-mpl -fNR $1:localhost:$1 anton@localhost -p 8890
+    -o PreferredAuthentications=password \
+    -M -S .tunnel-mpl -fNR $1:localhost:$1 master@localhost -p 9002
