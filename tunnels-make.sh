@@ -2,7 +2,7 @@
 
 config=$1
 if [ -z "$config" ]; then
-    config='config-tf1x.sh'
+    config='config-tf2.sh'
 fi
 
 source "$config"
